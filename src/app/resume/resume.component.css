@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 35px rgba(0,0,0,0.1);
+}
+.container .left{
+    position: relative;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    padding: 40px;
+}
+.container .right{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+.profile-side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profile-side .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-side .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-side h2{
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profile-side h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+/* .text{
+    color: aqua;
+} */
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 20px;
+    color: white;
+}
+.contactInfo.edu li{
+    margin-bottom: 15px;
+}
+.contactInfo.edu h5{
+    color: black;
+    font-weight: 500;
+}
+.contactInfo.edu h4{
+    color: white;
+    font-weight: 500;
+}
+.contactInfo.lang .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.lang .percent div{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    background-color: white;
+}
+.about{
+    margin-bottom: 25px;
+}
+.about:last-child{
+    margin-bottom: 0%;
+}
+.rightTitle{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+/* p{
+
+} */
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .yearOfJoining{
+    min-width: 150px;
+}
+.about .box .yearOfJoining h5{
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.about .box .text h4{
+    text-transform: uppercase;
+    color: lightblue;
+    font-size: 16px;
+}
+.about .box .project h5{
+    min-width: 100px;
+    display: inline-block;
+}
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: black;
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lightblue;
+}
+.intrest ul{
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+}
+.intrest ul li{
+    list-style: none;
+    color: white;
+    font-weight: 500;
+    /* margin: 10px 0  ; */
+}
+@media(max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .intrest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+@media(max-width:600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .yearOfJoining{
+        min-width: none;
+        margin-bottom: 5px;
+    }
+    .intrest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+    }   
+}
